@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- browser reset  -->  
-    <!-- new styling specific to this application -->
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./VLC.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <header>
+    <header style="background-color: whitesmoke;">
         <div class="titlebar">
             <img src="./VLC.png" alt="vlc logo" class="title-img">
             <h2 class="title">VLC Media Player</h2>
         </div>
-        <div class="menu-bar">
+        <div class="menu-bar" style="display: flex; align-items: center; justify-content: center;">
             <div class="menu">
-                <div class="menu-btn"  id="videoBtn">Open</div>
+                <div class="menu-btn"  id="videoBtn">Media</div>
                 <input type="file" class="videoInput" id="videoInput" style="width: 500px;">
             </div>
             <div class="menu">
@@ -44,7 +45,29 @@
        
     </main>
     <footer>
-        <i class="fa-solid fa-play"></i>
+        <div class="media-controls" style="gap: 10px; top: 10px;">
+            <!-- Play/Pause button -->
+            <button id="playPauseBtn" class="icon-btn">
+              <i class="fas fa-play" style="width: 10px; height: 10px;"></i>
+              <i class="fas fa-pause" style="width: 10px; height: 10px;"></i>
+            </button>
+            
+            <!-- Volume control -->
+            <button id="volumeUpBtn" class="icon-btn">
+              <i class="fas fa-volume-up" style="width: 30px;"></i> <!-- Volume Up -->
+            </button>
+            <button id="volumeDownBtn" class="icon-btn">
+              <i class="fas fa-volume-down" style="width: 30px;"></i> <!-- Volume Down -->
+            </button>
+            
+            <!-- Speed control -->
+            <button id="speedUpBtn" class="icon-btn">
+              <i class="fas fa-fast-forward" style="width: 30px;"></i> <!-- Fast forward -->
+            </button>
+            <button id="slowDownBtn" class="icon-btn">
+              <i class="fas fa-undo" style="width: 30px;"></i> <!-- Rewind -->
+            </button>
+          </div>
     </footer>
 </body>
 
